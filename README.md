@@ -11,25 +11,27 @@ acts as a placeholder for the content that will be projected into it.
 
 Here's a simple example to illustrate content projection:
   
-<!-- parent.component.html -->
-<div>
-  <h2>Welcome to the parent component!</h2>
-  <app-child>
-    <h3>This is the projected content</h3>
-    <p>Some additional text</p>
-  </app-child>
-</div>
+```typescript
+"<!-- parent.component.html -->"
+"<div>"
+  "<h2>Welcome to the parent component!</h2>"
+  "<app-child>"
+    "<h3>This is the projected content</h3>"
+    "<p>Some additional text</p>"
+  "</app-child>"
+"</div>"
 
 <!-- child.component.html -->
 <div>
   <h4>This is the child component</h4>
   <ng-content></ng-content>
 </div>
+```
 
-In the above example, we have a parent component that includes an <app-child> component. Inside the <app-child> component tags, we have included
-some content, including an <h3> and <p> element. This content will be projected into the <ng-content> placeholder in the child component's template.
+In the above example, we have a parent component that includes an app-child component. Inside the app-child component tags, we have included
+some content, including an h3 and p element. This content will be projected into the <ng-content> placeholder in the child component's template.
 
-When the parent component is rendered, the content provided within the <app-child> tags will be injected into the <ng-content> element in the child
+When the parent component is rendered, the content provided within the app-child tags will be injected into the ng-content element in the child
 component's template. The child component's template acts as a wrapper for the projected content, allowing you to combine the parent and child component's
 content in a flexible manner.
 
